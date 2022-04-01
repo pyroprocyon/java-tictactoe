@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TicTacToe {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-        
+
         System.out.println("\nLet's play tic tac toe");
 
         char[][] board = {
@@ -56,7 +56,7 @@ public class TicTacToe {
             }
             System.out.println("\n");
         }
-    }       
+    }
 
     public static int[] askUser(char[][] board) {
         System.out.print("Pick a row and column number (1 - 3): ");
