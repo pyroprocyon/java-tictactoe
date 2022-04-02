@@ -6,29 +6,25 @@ public class TicTacToe {
 
         System.out.println("\nLet's play tic tac toe");
 
+        int result = 0;
         char[][] board = {
             {'_', '_', '_'},
             {'_', '_', '_'},
             {'_', '_', '_'}
         };
-
-        int result = 0;
-
         printBoard(board);
 
         for (int i = 0; i < 9; i++) {
-            int[] pos;
             if (i % 2 == 0) {
                 System.out.println("Turn: X");
-                pos = askUser(board);
-                board[pos[0]][pos[1]] = 'X';
-                printBoard(board);
+                int[] pos = askUser(board);
+                board[pos[0]][pos[1]] = 'X';      
             } else {
                 System.out.println("Turn: O");
-                pos = askUser(board);
+                int[] pos = askUser(board);
                 board[pos[0]][pos[1]] = 'O';
-                printBoard(board);
             }
+            printBoard(board);
 
             result = checkWin(board);
             if (result == 3) {
